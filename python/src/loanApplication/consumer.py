@@ -1,7 +1,7 @@
 import pika,sys,os,time
 from pymongo import MongoClient
 import gridfs
-from convert import to_mp3
+from validation import validator
 
 
 def main():
@@ -19,7 +19,7 @@ def main():
     )
     channel=conn.channel()
     def callback(ch,method,properties,body):
-        err=to_mp3.start(body,fs_docs,fs_content,ch)
+        err=validator.start(body,fs_docs,fs_content,ch)
         if err:
             ch.basic_nack(delivery_tag=method.delivery_tag)
         else:
