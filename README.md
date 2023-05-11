@@ -4,6 +4,7 @@
 
 In addition to this, the Credit Service stores the generated credit agreement and amortization table in the database, which the Application Service can retrieve later if needed. 
 And finally, the Notification Service receives the notification status from the Application Service and sends a notification to the borrower, which can be done using an email or a push notification service.
+ `-------------------------------------------------------------------------------------------------------------------------------`
 Technologies:
 For this loan management module, we could use the following technologies:
 `1.Docker: This is a containerization platform that would make it easy to package and deploy the microservices.`
